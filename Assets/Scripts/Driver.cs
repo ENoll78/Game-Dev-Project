@@ -7,16 +7,21 @@ public class Driver : MonoBehaviour
     [SerializeField] float currentSpeed;
     
     [SerializeField] int lane = 1; //car starts in the middle lane
-    [SerializeField] int gear = 0; //car starts in first gear
 
     [SerializeField] float[] laneArray; //length 3 = 0 left, 1 mid, 2 right
-    [SerializeField] float[] gearArray; //length 4 - 0 1st, 1 2nd, 2 3rd, 3 4th
+    [SerializeField] float initalSpeed;
+    [SerializeField] float speedUpRate;
+    [SerializeField] float slowDownRate;
+    [SerializeField] float maxSpeed;
+    [SerializeField] float minSpeed;
 
     [SerializeField] bool passedGoal = false; //serialize for debugging
 
     private void Start() 
     {
-        currentSpeed = gearArray[gear];
+        // currentSpeed = gearArray[gear];
+        currentSpeed = initalSpeed;
+
     }
 
     void Update()
@@ -25,11 +30,11 @@ public class Driver : MonoBehaviour
 
         if(!passedGoal)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+            if(Input.GetAxis("Vertical") == 1)
             {
                 SpeedUp();
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+            else if(Input.GetAxis("Vertical") == -1)
             {
                 SlowDown();
             }
@@ -57,18 +62,24 @@ public class Driver : MonoBehaviour
 
     void SpeedUp ()
     {
-        if(gear < gearArray.Length - 1)
+        if(currentSpeed + speedUpRate <= maxSpeed)
         {
-            gear++;
-            currentSpeed = gearArray[gear];
+            currentSpeed += speedUpRate;
+        }
+        else
+        {
+            currentSpeed = maxSpeed;
         }
     }
     void SlowDown()
     {
-        if (gear > 0)
+        if(currentSpeed - slowDownRate >= minSpeed)
         {
-            gear--;
-            currentSpeed = gearArray[gear];
+            currentSpeed -= slowDownRate;
+        }
+        else
+        {
+            currentSpeed = minSpeed;
         }
     }
     void MoveLeft()

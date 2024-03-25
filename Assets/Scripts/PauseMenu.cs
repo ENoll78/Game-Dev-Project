@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; //Not used yet, will add options or return to main menu eventually
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenu;
-    public static bool isPaused;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        pauseMenu.SetActive(false);    
-    }
+    [SerializeField] GameObject pauseMenu;
+    public static bool isPaused = false;
 
     // Update is called once per frame
     void Update()
@@ -41,5 +36,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

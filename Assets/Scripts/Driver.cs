@@ -21,7 +21,6 @@ public class Driver : MonoBehaviour
     {
         // currentSpeed = gearArray[gear];
         currentSpeed = initalSpeed;
-
     }
 
     void Update()

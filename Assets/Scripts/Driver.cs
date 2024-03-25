@@ -21,31 +21,33 @@ public class Driver : MonoBehaviour
     {
         // currentSpeed = gearArray[gear];
         currentSpeed = initalSpeed;
-
     }
 
     void Update()
     {
-        transform.Translate(0f, currentSpeed * Time.deltaTime, 0f);
-
-        if(!passedGoal)
+        if(!PauseMenu.isPaused) // Should kill inputs while paused??
         {
-            if(Input.GetAxis("Vertical") == 1)
-            {
-                SpeedUp();
-            }
-            else if(Input.GetAxis("Vertical") == -1)
-            {
-                SlowDown();
-            }
+            transform.Translate(0f, currentSpeed * Time.deltaTime, 0f);
 
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            if(!passedGoal)
             {
-                MoveLeft();
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-            {
-                MoveRight();
+                if(Input.GetAxis("Vertical") == 1)
+                {
+                    SpeedUp();
+                }
+                else if(Input.GetAxis("Vertical") == -1)
+                {
+                    SlowDown();
+                }
+
+                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+                {
+                    MoveLeft();
+                }
+                else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+                {
+                    MoveRight();
+                }
             }
         }
     }

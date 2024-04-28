@@ -7,7 +7,7 @@ public class Driver : MonoBehaviour
     [SerializeField] float currentSpeed;
     
     [SerializeField] int lane = 0;
-    [SerializeField] float[] laneArray; //length 4 = 0 left, 1 mid, 2 right, 3 right-right (lol)
+    [SerializeField] float[] laneArray; //length 4
     [SerializeField] float initalSpeed;
     [SerializeField] float speedUpRate;
     [SerializeField] float slowDownRate;

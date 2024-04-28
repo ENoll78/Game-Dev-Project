@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - DriveThruMenu
+  - Road
   - Water
   - UI
   - 
@@ -41,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 904385679
+    locked: 0
+  - name: Road
+    uniqueID: 3069183607
+    locked: 0
+  - name: UI
+    uniqueID: 1513428559
     locked: 0

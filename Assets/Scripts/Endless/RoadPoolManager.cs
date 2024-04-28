@@ -1,54 +1,97 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class RoadPoolManager : MonoBehaviour
 {
-    public GameObject roadPrefab;
-    public int poolSize = 5;
-    private Queue<GameObject> roadQueue = new Queue<GameObject>();
-    private GameObject lastRoadSection;
+    [SerializeField]
+    GameObject[] roadPrefabs;
+
+    GameObject[] roadPool = new GameObject[20];
+
+    GameObject[] sections = new GameObject[20];
+
+    Transform playerCarTransform;
+
+    WaitForSeconds waitFor100ms = new WaitForSeconds(0.1f);
+
+    const float sectionLength = 40;
+
     void Start()
     {
-        Vector3 startPos = new Vector3(0, 0, 0);
-        for (int i = 0; i < poolSize; i++)
+        playerCarTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        int prefabIndex = 0;
+
+        for(int i = 0; i < roadPool.Length; i++)
         {
-            GameObject obj = Instantiate(roadPrefab, startPos, Quaternion.identity);
-            obj.SetActive(false);
-            roadQueue.Enqueue(obj);
-            lastRoadSection = obj;
-            startPos.y -= obj.GetComponent<SpriteRenderer>().bounds.size.y;
+            roadPool[i] = Instantiate(roadPrefabs[prefabIndex]);
+            roadPool[i].SetActive(false);
+            prefabIndex++;
+
+            if (prefabIndex > roadPrefabs.Length - 1)
+                prefabIndex = 0;
+        }
+
+        // Starting sections
+        for (int i = 0; i < sections.Length; i++)
+        {
+                GameObject randomSection = GetRandomSectionFromPool();
+
+                // Move road position and activate
+                randomSection.transform.position = new Vector3(roadPool[i].transform.position.x, i * sectionLength, 1);
+                randomSection.SetActive(true);
+
+                sections[i] = randomSection;
+        }
+
+        StartCoroutine(UpdateLessOftenCO());
+    }
+
+    IEnumerator UpdateLessOftenCO()
+    {
+        while (true)
+        {
+            yield return waitFor100ms;
         }
     }
 
-    public GameObject GetRoad()
+    void UpdateRoadPositions()
     {
-        GameObject obj = (roadQueue.Count > 0) ? roadQueue.Dequeue() : Instantiate(roadPrefab);
-        obj.SetActive(true);
-        PositionRoad(obj);
-        return obj;
-    }
-
-private void PositionRoad(GameObject road)
-{
-    SpriteRenderer spriteRenderer = road.GetComponent<SpriteRenderer>();
-    if (spriteRenderer != null)
-    {
-        if (lastRoadSection != null)
+        for (int i = 0; i <sectionLength; i++)
         {
-            float roadHeight = spriteRenderer.bounds.size.y;
-            road.transform.position = new Vector3(5, lastRoadSection.transform.position.y + roadHeight, 1);
-        }
-        lastRoadSection = road;
-    }
-    else
-    {
-        Debug.LogError("No SpriteRenderer found on the road prefab!");
-    }
-}
+            if(sections[i].transform.position.y - playerCarTransform.position.y < - sectionLength)
+            {
+                Vector3 lastSectionPosition = sections[i].transform.position;
+                sections[i].SetActive(false);
 
-    public void ReturnRoad(GameObject road)
+                sections[i] = GetRandomSectionFromPool();
+
+                sections[i].transform.position = new Vector3(lastSectionPosition.x, lastSectionPosition.y + sectionLength *sections.Length, 1);
+                sections[i].SetActive(true);
+            }
+        }
+    }
+
+    GameObject GetRandomSectionFromPool()
     {
-        road.SetActive(false);
-        roadQueue.Enqueue(road);
+        int randomIndex = Random.Range(0, roadPool.Length);
+
+        bool isNewSectionFound = false;
+
+        while(!isNewSectionFound)
+        {
+            if(!roadPool[randomIndex].activeInHierarchy)
+                isNewSectionFound = true;
+            else
+            {
+                randomIndex++;
+
+                //validate
+                if(randomIndex > roadPool.Length - 1)
+                    randomIndex = 0;
+            }
+        }
+    
+    return roadPool[randomIndex];
     }
 }

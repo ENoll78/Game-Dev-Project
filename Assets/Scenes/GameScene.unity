@@ -830,7 +830,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roadPrefabs:
-  - {fileID: 0}
+  - {fileID: 3772588578994462219, guid: 351cd7f94b468a545b7a5968ec557abd, type: 3}
+  - {fileID: 9044232575950560851, guid: f6be2072875cc5f48a81c0a8972a2d04, type: 3}
+  - {fileID: 3500391451271058364, guid: 93f1b2b3f06e22d46b692743eb7157c9, type: 3}
 --- !u!114 &828791324
 MonoBehaviour:
   m_ObjectHideFlags: 0

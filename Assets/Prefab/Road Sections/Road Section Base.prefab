@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &96424226868657959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078398433091461352}
+  m_Layer: 3
+  m_Name: Buildings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078398433091461352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96424226868657959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7341663796501041865}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &310098077696532184
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7270297619547258271}
   - component: {fileID: 4169056546650192874}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RoadTile_MGFNH (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 310098077696532184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 9.411764, z: 0}
+  m_LocalPosition: {x: 0, y: 9.411764, z: 1}
   m_LocalScale: {x: 1, y: 1.0251564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -94,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2512350272819400634}
   - component: {fileID: 6729615753620030812}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RoadTile_MGFNH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +141,7 @@ Transform:
   m_GameObject: {fileID: 1890310313400216173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.705882, z: 0}
+  m_LocalPosition: {x: 0, y: -4.705882, z: 1}
   m_LocalScale: {x: 1, y: 1.0251564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -177,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305093455813617316}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 3013007357361209532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6, z: 0.2}
+  m_LocalPosition: {x: 0, y: -6, z: 1}
   m_LocalScale: {x: 1.7, y: 1.7, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -212,7 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5954633302575000477}
   - component: {fileID: 6681039833919343291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RoadTile_MGFNH (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 4196559917287987616}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.705882, z: 0}
+  m_LocalPosition: {x: 0, y: 4.705882, z: 1}
   m_LocalScale: {x: 1, y: 1.0251564, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -295,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7341663796501041865}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Road Section Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,11 +343,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3768408146762552164}
   - {fileID: 305093455813617316}
+  - {fileID: 2078398433091461352}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7103826123678484446
@@ -331,7 +363,7 @@ GameObject:
   - component: {fileID: 1170989569533674734}
   - component: {fileID: 8880878308997376180}
   - component: {fileID: 8400685118059170195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +379,7 @@ Transform:
   m_GameObject: {fileID: 7103826123678484446}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -2, z: 1}
   m_LocalScale: {x: 60, y: 40, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []

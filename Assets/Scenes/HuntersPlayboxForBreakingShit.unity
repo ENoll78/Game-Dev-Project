@@ -785,6 +785,10 @@ PrefabInstance:
       propertyPath: needleTransform
       value: 
       objectReference: {fileID: 763740164}
+    - target: {fileID: 32315118572437863, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
+      propertyPath: speedLimitElement
+      value: 
+      objectReference: {fileID: 1684944469}
     - target: {fileID: 690000832836113424, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.16
@@ -839,7 +843,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 690000832836113424, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1868640350}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4608673747184799879, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1857357014}
   m_SourcePrefab: {fileID: 100100000, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
 --- !u!1 &1098592609
 GameObject:
@@ -1617,6 +1624,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 690000832836113424, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
   m_PrefabInstance: {fileID: 992957717}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1857357012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 32315118572437863, guid: a816df6bdb09f6f45a51f8f23327db8d, type: 3}
+  m_PrefabInstance: {fileID: 992957717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857357002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23b4e9d432e2a4cb9b231658ed878253, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1857357014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857357002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d622be185ee4221b12e059c357c944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driver: {fileID: 1857357012}
+  speedLimitElement: {fileID: 1684944469}
+  needleTransform: {fileID: 763740164}
 --- !u!1 &1868640349
 GameObject:
   m_ObjectHideFlags: 0

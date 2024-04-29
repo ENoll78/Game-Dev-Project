@@ -6,8 +6,7 @@ using TMPro;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float currentSpeed;
-    
+    [SerializeField]public float currentSpeed;
     [SerializeField] int lane = 0;
     [SerializeField] float[] laneArray; //length 4
     [SerializeField] float initalSpeed;
@@ -18,11 +17,6 @@ public class Driver : MonoBehaviour
 
     [SerializeField] bool passedGoal = false; //serialize for debugging
 
-    public TextMeshProUGUI speedlimit;
-    public RectTransform needleTransform;
-
-    private Vector3 temp;
-
     private void Start() 
     {
         // currentSpeed = gearArray[gear];
@@ -31,24 +25,6 @@ public class Driver : MonoBehaviour
 
     void Update()
     {
-        /**
-        * CODE BLOCK - Hunter Lane, this code changes the UI information. Don't worry about it.
-        **/
-
-        if (speedlimit != null) {
-            speedlimit.text = currentSpeed.ToString("#");
-        }
-
-        if (needleTransform != null) {
-            temp = needleTransform.rotation.eulerAngles;
-            temp.z = ((currentSpeed*9f) - 90f) * -1f;
-            needleTransform.rotation = Quaternion.Euler(temp);
-        }
-
-        /**
-        * CODE BLOCK END - Hunter Lane.
-        **/
-
         if(!PauseMenu.isPaused) // Should kill inputs while paused??
         {
             transform.Translate(0f, currentSpeed * Time.deltaTime, 0f);

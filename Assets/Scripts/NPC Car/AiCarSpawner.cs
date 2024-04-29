@@ -31,6 +31,9 @@ public class AiCarSpawner : MonoBehaviour
         for (int i = 0; i < carAIPool.Length; i++)
         {
             carAIPool[i] = Instantiate(carAIPrefabs[prefabIndex], transform);
+            
+            Debug.Log($"Instantiated NPC car at position: {carAIPool[i].transform.position}");
+
             carAIPool[i].transform.position = new Vector3(carAIPool[i].transform.position.x, carAIPool[i].transform.position.y, -0.1f);
             carAIPool[i].SetActive(false);
             prefabIndex = (prefabIndex + 1) % carAIPrefabs.Length;
@@ -70,7 +73,7 @@ public class AiCarSpawner : MonoBehaviour
             return;
 
         int chosenLane = UnityEngine.Random.Range(0, lanePositions.Length);
-        bool isOppositeDirection = chosenLane >= 2; 
+        bool isOppositeDirection = chosenLane <= 1; 
         Vector3 spawnPosition = new Vector3(lanePositions[chosenLane], playerCarTransform.transform.position.y + 50, -0.1f);
 
         // check spawn location
@@ -86,7 +89,8 @@ public class AiCarSpawner : MonoBehaviour
         }
         carToSpawn.SetActive(true);
         carToSpawn.transform.position = new Vector3(carToSpawn.transform.position.x, carToSpawn.transform.position.y, -0.1f);
-        
+        Debug.Log($"Spawned NPC car at position: {carToSpawn.transform.position}");
+
         timeLastCarSpawned = Time.time;
     }
 

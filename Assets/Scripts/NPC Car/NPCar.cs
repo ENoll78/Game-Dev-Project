@@ -21,8 +21,8 @@ public void SetInitialLane(float lanePosition, bool isOppositeDirection)
 
     if (isOppositeDirection)
     {
-        speed = -Mathf.Abs(speed);
-        transform.rotation = Quaternion.Euler(0, 180, 0);
+        speed = Mathf.Abs(speed);
+        transform.rotation = Quaternion.Euler(180, 0, 0);
     }
     else
     {
@@ -33,6 +33,8 @@ public void SetInitialLane(float lanePosition, bool isOppositeDirection)
 
 void Update()
 {
+    
+    Debug.Log($"NPC car {gameObject.name} is supposed to be moving at speed: {speed}");
     transform.Translate(0f, speed * Time.deltaTime, 0f);
 }
 }

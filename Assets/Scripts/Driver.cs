@@ -17,10 +17,14 @@ public class Driver : MonoBehaviour
 
     [SerializeField] bool passedGoal = false; //serialize for debugging
 
+    private Vector3 LeftTemp;
+    private Vector3 RightTemp;
+
     private void Start() 
     {
         // currentSpeed = gearArray[gear];
-        
+        LeftTemp = new Vector3();
+        RightTemp = new Vector3();
         currentSpeed = initalSpeed;
     }
 
@@ -41,13 +45,14 @@ public class Driver : MonoBehaviour
                     SlowDown();
                 }
 
-                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+                if (Input.GetAxis("Horizontal") < -0.3)
                 {
                     MoveLeft();
                 }
-                else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+                else if (Input.GetAxis("Horizontal") > 0.3f)
                 {
                     MoveRight();
+                    
                 }
             }
         }
@@ -90,8 +95,8 @@ public class Driver : MonoBehaviour
         if (lane > 0)
         {
             lane--;
-            
-            transform.position.Set(laneArray[lane], transform.position.y, 0f);
+            LeftTemp.Set(laneArray[lane], transform.position.y, 0f);
+            transform.position = LeftTemp;
         }
     }
     void MoveRight()
@@ -99,7 +104,8 @@ public class Driver : MonoBehaviour
         if (lane < laneArray.Length - 1)
         {
             lane++;
-            transform.position.Set(laneArray[lane], transform.position.y, 0f);
+            RightTemp.Set(laneArray[lane], transform.position.y, 0f);
+            transform.position = RightTemp;
         }
     }
 }

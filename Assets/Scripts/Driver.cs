@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Driver : MonoBehaviour
 {
     [SerializeField] float currentSpeed;
     
-    [SerializeField] int lane = 0;
+    [SerializeField] int lane = 3;
     [SerializeField] float[] laneArray; //length 4
     [SerializeField] float initalSpeed;
     [SerializeField] float speedUpRate;
@@ -59,6 +60,8 @@ public class Driver : MonoBehaviour
             passedGoal = true;
             Debug.Log("You did it!");
         }
+        else
+            SceneManager.LoadScene("GameOver");
     }
 
     void SpeedUp ()

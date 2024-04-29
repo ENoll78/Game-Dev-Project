@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class Driver : MonoBehaviour
 {
-    [SerializeField] float currentSpeed;
-    
-    [SerializeField] int lane = 3;
+    [SerializeField]public float currentSpeed;
+    [SerializeField] int lane = 0;
     [SerializeField] float[] laneArray; //length 4
     [SerializeField] float initalSpeed;
     [SerializeField] float speedUpRate;
@@ -17,13 +17,18 @@ public class Driver : MonoBehaviour
 
     [SerializeField] bool passedGoal = false; //serialize for debugging
 
+    private Vector3 LeftTemp;
+    private Vector3 RightTemp;
+
     private void Start() 
     {
         // currentSpeed = gearArray[gear];
+        LeftTemp = new Vector3();
+        RightTemp = new Vector3();
         currentSpeed = initalSpeed;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(!PauseMenu.isPaused) // Should kill inputs while paused??
         {
@@ -47,6 +52,7 @@ public class Driver : MonoBehaviour
                 else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                 {
                     MoveRight();
+                    
                 }
             }
         }
@@ -91,7 +97,8 @@ public class Driver : MonoBehaviour
         if (lane > 0)
         {
             lane--;
-            transform.position = new Vector3 (laneArray[lane], transform.position.y, 0f);
+            LeftTemp.Set(laneArray[lane], transform.position.y, 0f);
+            transform.position = LeftTemp;
         }
     }
     void MoveRight()
@@ -99,7 +106,8 @@ public class Driver : MonoBehaviour
         if (lane < laneArray.Length - 1)
         {
             lane++;
-            transform.position = new Vector3 (laneArray[lane], transform.position.y, 0f);
+            RightTemp.Set(laneArray[lane], transform.position.y, 0f);
+            transform.position = RightTemp;
         }
     }
 }

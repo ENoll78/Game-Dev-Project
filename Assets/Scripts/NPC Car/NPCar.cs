@@ -17,7 +17,7 @@ public void SetInitialLane(float lanePosition, bool isOppositeDirection)
     float startingY = transform.position.y + 100;
     float zPosition = -0.1f;
 
-    transform.position = new Vector3(lanePosition, startingY, zPosition);
+    transform.position.Set(lanePosition, startingY, zPosition);
 
     if (isOppositeDirection)
     {
@@ -31,7 +31,7 @@ public void SetInitialLane(float lanePosition, bool isOppositeDirection)
     }
 }
 
-void Update()
+void FixedUpdate()
 {
     
     Debug.Log($"NPC car {gameObject.name} is supposed to be moving at speed: {speed}");

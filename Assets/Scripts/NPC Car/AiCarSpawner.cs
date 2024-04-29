@@ -8,7 +8,7 @@ public class AiCarSpawner : MonoBehaviour
 {
     [SerializeField]
     GameObject[] carAIPrefabs;
-
+    [SerializeField] private float[] lanePositions;
     GameObject[] carAIPool = new GameObject[20];
 
     Transform playerCarTransform;
@@ -30,14 +30,13 @@ public class AiCarSpawner : MonoBehaviour
 
         for (int i = 0; i < carAIPool.Length; i++)
         {
-            carAIPool[i] = Instantiate(carAIPrefabs[prefabIndex]);
+            carAIPool[i] = Instantiate(carAIPrefabs[prefabIndex], transform);
+            carAIPool[i].transform.position = new Vector3(carAIPool[i].transform.position.x, carAIPool[i].transform.position.y, -0.1f);
             carAIPool[i].SetActive(false);
+            prefabIndex = (prefabIndex + 1) % carAIPrefabs.Length;
+        }
 
-            prefabIndex++;
-
-            if (prefabIndex > carAIPrefabs.Length - 1)
-                prefabIndex = 0;
-        }    
+        StartCoroutine(UpdateLessOftenCO());
     }
 
     IEnumerator UpdateLessOftenCO()
@@ -70,15 +69,24 @@ public class AiCarSpawner : MonoBehaviour
         if (carToSpawn == null)
             return;
 
-        Vector3 spawnPosition = new Vector3(0, playerCarTransform.transform.position.y + 100, 0);
+        int chosenLane = UnityEngine.Random.Range(0, lanePositions.Length);
+        bool isOppositeDirection = chosenLane >= 2; 
+        Vector3 spawnPosition = new Vector3(lanePositions[chosenLane], playerCarTransform.transform.position.y + 50, -0.1f);
 
         // check spawn location
         if (Physics.OverlapBoxNonAlloc(spawnPosition, Vector3.one * 2, overlappedCheckCollider, Quaternion.identity, otherCarsLayerMask) > 0)
             return;
 
         carToSpawn.transform.position = spawnPosition;
+        NPCar npcCarComponent = carToSpawn.GetComponent<NPCar>();
+        
+        if (npcCarComponent != null)
+        {
+            npcCarComponent.SetInitialLane(lanePositions[chosenLane], isOppositeDirection);
+        }
         carToSpawn.SetActive(true);
-
+        carToSpawn.transform.position = new Vector3(carToSpawn.transform.position.x, carToSpawn.transform.position.y, -0.1f);
+        
         timeLastCarSpawned = Time.time;
     }
 
@@ -88,9 +96,6 @@ public class AiCarSpawner : MonoBehaviour
         {
             if (!aiCar.activeInHierarchy)
                 continue;
-
-            if (aiCar.transform.position.y - playerCarTransform.position.y > 200)
-                aiCar.SetActive(false);
 
             if (aiCar.transform.position.y - playerCarTransform.position.y < -50)
                 aiCar.SetActive(false);

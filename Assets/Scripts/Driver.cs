@@ -66,6 +66,8 @@ public class Driver : MonoBehaviour
             passedGoal = true;
             Debug.Log("You did it!");
         }
+        else
+            SceneManager.LoadScene("GameOver");
     }
 
     void SpeedUp ()

@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RoadPoolManager : MonoBehaviour
@@ -8,13 +8,9 @@ public class RoadPoolManager : MonoBehaviour
     GameObject[] roadPrefabs;
 
     GameObject[] roadPool = new GameObject[20];
-
     GameObject[] sections = new GameObject[20];
-
     Transform playerCarTransform;
-
     WaitForSeconds waitFor100ms = new WaitForSeconds(0.1f);
-
     const float sectionLength = 40;
 
     void Start()
@@ -22,26 +18,21 @@ public class RoadPoolManager : MonoBehaviour
         playerCarTransform = GameObject.FindGameObjectWithTag("Player").transform;
         int prefabIndex = 0;
 
-        for(int i = 0; i < roadPool.Length; i++)
+        for (int i = 0; i < roadPool.Length; i++)
         {
             roadPool[i] = Instantiate(roadPrefabs[prefabIndex]);
             roadPool[i].SetActive(false);
-            prefabIndex++;
-
-            if (prefabIndex > roadPrefabs.Length - 1)
+            if (++prefabIndex >= roadPrefabs.Length)
                 prefabIndex = 0;
         }
 
         // Starting sections
         for (int i = 0; i < sections.Length; i++)
         {
-                GameObject randomSection = GetRandomSectionFromPool();
-
-                // Move road position and activate
-                randomSection.transform.position = new Vector3(roadPool[i].transform.position.x, i * sectionLength, 1);
-                randomSection.SetActive(true);
-
-                sections[i] = randomSection;
+            GameObject randomSection = GetRandomSectionFromPool();
+            randomSection.transform.position = new Vector3(0, i * sectionLength, 1); // Standardized X position
+            randomSection.SetActive(true);
+            sections[i] = randomSection;
         }
 
         StartCoroutine(UpdateLessOftenCO());
@@ -51,22 +42,20 @@ public class RoadPoolManager : MonoBehaviour
     {
         while (true)
         {
+            UpdateRoadPositions();
             yield return waitFor100ms;
         }
     }
 
     void UpdateRoadPositions()
     {
-        for (int i = 0; i <sectionLength; i++)
+        for (int i = 0; i < sections.Length; i++)
         {
-            if(sections[i].transform.position.y - playerCarTransform.position.y < - sectionLength)
+            if (playerCarTransform.position.y - sections[i].transform.position.y > sectionLength)
             {
-                Vector3 lastSectionPosition = sections[i].transform.position;
                 sections[i].SetActive(false);
-
                 sections[i] = GetRandomSectionFromPool();
-
-                sections[i].transform.position = new Vector3(lastSectionPosition.x, lastSectionPosition.y + sectionLength *sections.Length, 1);
+                sections[i].transform.position = new Vector3(0, sections[i].transform.position.y + sectionLength * sections.Length, 1);
                 sections[i].SetActive(true);
             }
         }
@@ -75,23 +64,11 @@ public class RoadPoolManager : MonoBehaviour
     GameObject GetRandomSectionFromPool()
     {
         int randomIndex = Random.Range(0, roadPool.Length);
-
-        bool isNewSectionFound = false;
-
-        while(!isNewSectionFound)
+        while (roadPool[randomIndex].activeInHierarchy)
         {
-            if(!roadPool[randomIndex].activeInHierarchy)
-                isNewSectionFound = true;
-            else
-            {
-                randomIndex++;
-
-                //validate
-                if(randomIndex > roadPool.Length - 1)
-                    randomIndex = 0;
-            }
+            if (++randomIndex >= roadPool.Length)
+                randomIndex = 0;
         }
-    
-    return roadPool[randomIndex];
+        return roadPool[randomIndex];
     }
 }

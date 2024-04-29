@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Goal
+  - NPC Car
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Road
+  - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Ground
+  - Obstacles
   - 
   - 
   - 

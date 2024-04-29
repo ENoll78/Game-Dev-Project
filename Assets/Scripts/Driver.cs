@@ -11,7 +11,7 @@ public class Driver : MonoBehaviour
     [SerializeField] float initalSpeed;
     [SerializeField] float speedUpRate;
     [SerializeField] float slowDownRate;
-    [SerializeField] float maxSpeed;
+    [SerializeField] float maxSpeed = 10;
     [SerializeField] float minSpeed;
 
     [SerializeField] bool passedGoal = false; //serialize for debugging

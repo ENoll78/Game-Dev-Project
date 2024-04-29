@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: ee8ed8d77afaf4e9f8e8f2b1534b3466
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1280
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7920
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e60b8f15c08e4c2492a245c6b17ab0d
+      internalID: -1362861747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 7920
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f30e18020f7c94b3cb8064f7efa79ca1
+      internalID: 1914494177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_2
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 7920
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d050cf067e9f24485b40f0351ac50264
+      internalID: -391152186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bedb5c0f56274ba8abcc9bcf96cc9d3
+      internalID: 593016008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_4
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 7200
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e3da0859f89432484b9a6ede78a9b9
+      internalID: 7266926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 7200
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa8558458f124e6b94a156cc70f422c
+      internalID: -856205646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6480
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: becee4e1110394dc3b4bfd1ebbd91b2e
+      internalID: 1736478954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_7
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 6480
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd355bf0b1604d12bd9c9780bdd0a5b
+      internalID: -1264210939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_8
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 6480
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4c28ea3ca70441298914dc92e82569
+      internalID: 470001858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5760
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e4c6747e67e4f7e8ce0dbf129afdd8
+      internalID: -2021505357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 5760
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5791348c0b6364eb3b9b8c3f64ab6ad9
+      internalID: -499804768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 5760
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968674ef69df94cdbb72a1f34949cc06
+      internalID: 1448684344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5040
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c03229b317a4e348950369cb4b51c9
+      internalID: -495538355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_13
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 5040
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7919b9f112d414083b96a5f4edd2bde5
+      internalID: 549735971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_14
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 5040
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1a5a0e23b564b5297bac7bf12ade19
+      internalID: 256195474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7225ee7d14f4990819003fc49bb3fa
+      internalID: -1914654526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4320
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33c554b8b7504d81ae507af7d156c52
+      internalID: 1819783212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_17
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 4320
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4d49aff0b444683b9cda36180ba52f
+      internalID: -500626810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3600
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494e91b162e2b4cbda29800e85657001
+      internalID: 1019517043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_19
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3600
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2159eeb3bca114ae99abe0f08ee5a797
+      internalID: 266877132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3600
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1028198c2b09049bfa87ec7928b8df1a
+      internalID: -1212933906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580387cdb906747e68a8867e1d15f3d5
+      internalID: -1894179243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_22
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2880
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c065d6cd38504c6fa9e1169764bb15a
+      internalID: 2026302206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_23
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2880
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb10c7f3315146f491a89fbe8fe72f9
+      internalID: 393761455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a29f717264894da692fff737d619c94
+      internalID: 1472745820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_25
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2160
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e99a36389f41b44e78933b5e54bba10c
+      internalID: 1313028385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_26
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2160
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7bf924ecf29484b9a31d6dcd68d0a4
+      internalID: -209554623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aebb4b726d4a4654b52463053bebf8d
+      internalID: -1770323351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_28
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1440
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bd11771d7a64a239babf2968a3ec39
+      internalID: -1292869377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_29
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1440
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b780806d068344109803eb4cce1344bc
+      internalID: 496574334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6971bc0d85fa14666814d9386fa42fae
+      internalID: -649629154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_31
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 720
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31267243018c447d91b620f7b9e1b0f
+      internalID: 1709543850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 720
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97c65903943e74e54a3150c90dc42c2d
+      internalID: 1822690984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc40fb690fee7437b8630f42cb3e7b5f
+      internalID: 1841767012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_34
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 1280
+        height: 720
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8d881ad374e47c2bda38442341a9e1
+      internalID: 70921759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_0: -1362861747
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_1: 1914494177
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_10: -499804768
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_11: 1448684344
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_12: -495538355
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_13: 549735971
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_14: 256195474
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_15: -1914654526
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_16: 1819783212
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_17: -500626810
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_18: 1019517043
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_19: 266877132
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_2: -391152186
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_20: -1212933906
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_21: -1894179243
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_22: 2026302206
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_23: 393761455
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_24: 1472745820
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_25: 1313028385
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_26: -209554623
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_27: -1770323351
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_28: -1292869377
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_29: 496574334
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_3: 593016008
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_30: -649629154
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_31: 1709543850
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_32: 1822690984
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_33: 1841767012
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_34: 70921759
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_4: 7266926
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_5: -856205646
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_6: 1736478954
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_7: -1264210939
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_8: 470001858
+      Angry_Girlfriend_2-ezgif.com-gif-to-sprite-converter (2)_9: -2021505357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

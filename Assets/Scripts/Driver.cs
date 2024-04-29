@@ -45,11 +45,11 @@ public class Driver : MonoBehaviour
                     SlowDown();
                 }
 
-                if (Input.GetAxis("Horizontal") < -0.3)
+                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
                 {
                     MoveLeft();
                 }
-                else if (Input.GetAxis("Horizontal") > 0.3f)
+                else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
                 {
                     MoveRight();
                     

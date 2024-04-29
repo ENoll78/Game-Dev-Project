@@ -20,10 +20,11 @@ public class Driver : MonoBehaviour
     private void Start() 
     {
         // currentSpeed = gearArray[gear];
+        
         currentSpeed = initalSpeed;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(!PauseMenu.isPaused) // Should kill inputs while paused??
         {
@@ -89,7 +90,8 @@ public class Driver : MonoBehaviour
         if (lane > 0)
         {
             lane--;
-            transform.position = new Vector3 (laneArray[lane], transform.position.y, 0f);
+            
+            transform.position.Set(laneArray[lane], transform.position.y, 0f);
         }
     }
     void MoveRight()
@@ -97,7 +99,7 @@ public class Driver : MonoBehaviour
         if (lane < laneArray.Length - 1)
         {
             lane++;
-            transform.position = new Vector3 (laneArray[lane], transform.position.y, 0f);
+            transform.position.Set(laneArray[lane], transform.position.y, 0f);
         }
     }
 }

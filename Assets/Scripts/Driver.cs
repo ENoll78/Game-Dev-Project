@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Driver : MonoBehaviour
@@ -28,6 +29,17 @@ public class Driver : MonoBehaviour
         currentSpeed = initalSpeed;
     }
 
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetMouseButton(0))
+        {
+            MoveLeft();
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        {
+            MoveRight();
+        }
+    }
+
     void FixedUpdate()
     {
         if(!PauseMenu.isPaused) // Should kill inputs while paused??
@@ -43,16 +55,6 @@ public class Driver : MonoBehaviour
                 else if(Input.GetAxis("Vertical") == -1)
                 {
                     SlowDown();
-                }
-
-                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-                {
-                    MoveLeft();
-                }
-                else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-                {
-                    MoveRight();
-                    
                 }
             }
         }
